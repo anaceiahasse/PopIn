@@ -1,0 +1,25 @@
+Package: PopIn
+Type: Package
+Title: impact of linear Infrastructures on Populations
+Version: 1.0
+Date: 2017-10-24
+Author: Ana Ceia-Hasse, Luís Borda-de-Água, Henrique M. Pereira
+Maintainer: Ana Ceia-Hasse <anaceiahasse@yahoo.com>
+Description: Includes functions to compute dispersal variance, population growth 
+    rate in favorable habitats, the maximum linear infrastructure
+    density and the minimum size of a habitat patch delimited by linear
+    infrastructures beyond which populations cannot persist, a spatially-implicit
+    stochastic age-structured model and a spatially-explicit individual-based
+    model of population dynamics. 
+    This package can be used to assess the impact of linear infrastructures in 
+    general - such as roads, railways, wind farms, power lines, water channels -, 
+    on populations, although the functions and models included were initially 
+    developed for studying the impact of roads.
+License: GPL (>= 2)
+LinkingTo: Rcpp
+Imports: Rcpp, plyr
+RoxygenNote: 6.0.1
+Suggests: knitr, rmarkdown
+VignetteBuilder: knitr
+NeedsCompilation: yes
+Encoding: UTF-8

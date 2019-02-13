@@ -1,0 +1,59 @@
+# parameter names and values for function indmodel
+
+n_rep = 2
+# The number of replicates to be run
+
+hab_aff = c(0.0, 1.0)
+# The habitat affinity values for each type of habitat
+#   two types of habitat:
+#     habaff <- c(hab_aff_bad, hab_aff_good)
+#   more than two types of habitat:
+#     habaff <- c(hab_aff_bad, hab_aff_good_max, hab_aff_good_2nd_highest, ...)
+
+n_steps = 200
+# The number of time steps in the simulation
+
+init_population = 10
+# The population size at the start of the simulation
+
+hr_size = 1
+# The size (i.e., the number of cells) of the home range
+
+birth_rate = 2.0
+# The maximum number of female juveniles produced by a breeding female
+
+breeding_age = 1
+# The age at which individuals start breeding
+
+survival = 0.4
+# The probability of survival
+
+distance_weight = 0.001
+# The weight given to cells closer to the home range centroid
+
+dispersal_distance = 5.0
+# The distance (i.e., the number of cells) that an individual has to disperse in order to settle a home range
+
+dispersal_mode = 2
+# The dispersal mode; case 0: Global dispersal; case 1: Local dispersal, habitat search in a local kernel; case 2: Local dispersal, random walk
+
+sink_avoidance = 0.1
+# The probability that an individual avoids dispersing through cells that correspond to sink habitat
+
+neigh_avoidance = 1.0
+# The probability that an individual avoids dispersing through cells that are already occupied
+
+sink_mortality = 0.9
+# The probability that an individual dies while dispersing through cells that correspond to sink habitat
+
+plotYN = "TRUE"
+# Draws plots with results if set to TRUE
+
+writeYN = "TRUE"
+# Creates a directory containing files with results if set to TRUE
+
+dir_name = "Res_indmodel"
+# The name of the directory where the files that store the results are saved
+
+file_name = "indmodel_rep"
+# The name of the file that will store results (for each replicate): parameter values, landscape used, and for each time step: position of individuals in the landscape, age of individuals, population size

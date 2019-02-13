@@ -1,0 +1,104 @@
+# parameters names and values for function agemodel
+
+years = 320
+# The total number of years for which the simulation runs
+
+transient1 = 120
+# Number of years; ensures that the age classes stabilize
+
+transient2 = 100
+# Number of years; it is used to estimate the average population size without road mortality (road mortality is applied after transient2)
+
+transient3 = 50	
+# Number of years; ensures that the population "stabilizes" after road mortality starts being applied; only if the population survives until the end of transient3 then information is collected
+
+f.mort = 0.05
+# The fraction of the population road-killed per year
+
+a = 5
+# parameter of the Beverton-Holt relationship
+
+b = 5
+# parameter of the Beverton-Holt relationship
+
+f.values = seq(0.1, 0.9, 0.1)
+# The values that the fraction of the population road-killed per year takes
+
+a.val = seq(1, 5, 1)
+# The values that "a" (parameter of the Beverton-Holt relationship) will take
+
+n.ages = 17
+# The number of age classes, i.e., the maximum number of years an individual can live
+
+min.age = 37
+# The age at maturity, that is, the minimum age at which an animal can reproduce (in months)
+
+repr.period = 18
+# The reproduction interval for a female, that is, the interval in months where a female gives birth
+
+months.of.recruitment = c("May", "June", "July", "August")
+# The months where animals reproduce
+
+prob.recr.month.m = c(100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100)
+# In those months where the population can reproduce, the mean proportion that reproduces (logit scale)
+
+prob.recr.month.sd = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+# In those months where the population can reproduce, the standard deviation of the proportion that reproduces (logit scale)
+
+prop.recr.age.m = c(1,	1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+# The mean proportion per age that reproduces (linear scale)
+
+prop.recr.age.sd = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+# The standard deviation of the proportion per age that reproduces (linear scale)
+
+clutch.size.m = 2.3
+# The mean number of eggs per clutch
+
+clutch.size.sd	= 1
+# The standard deviation of the number of eggs per clutch
+
+jsmm = 0.86
+# The mean of juvenile survival rate for males
+
+jssdm = 0.09
+# The standard deviation of juvenile survival rate for males
+
+jsmf = 0.86
+# The mean of juvenile survival rate for females
+
+jssdf = 0.06
+# The standard deviation of juvenile survival rate for females
+
+ysmm = 0.62
+# The mean of yearling survival rate for males
+
+yssdm = 0.06
+# The standard deviation of yearling survival rate for males
+
+ysmf = 0.62
+# The mean of yearling survival rate for females
+
+yssdf = 0.06
+# The standard deviation of yearling survival rate for females
+
+asmm = 0.47
+# The mean of adult survival rate for males
+
+assdm = 0.05
+# The standard deviation of adult survival rate for males
+
+asmf = 0.47
+# The mean of adult survival rate for females
+
+assdf = 0.05
+# The standard deviation of adult survival rate for females
+
+plotTF = "TRUE"
+# Draws plots with results if set to TRUE
+
+writeTF = "TRUE"
+# Creates a directory containing files with results if set to TRUE
+
+dirname.basic = "agemodel_basic"
+dirname.rep = "agemodel_rep"
+# The name of the directory where the files with results are stored when writeTF = TRUE

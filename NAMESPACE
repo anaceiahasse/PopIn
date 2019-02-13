@@ -1,0 +1,10 @@
+export(sigma2, r1, mlid, mps, indmodel, agemodel)
+useDynLib(PopIn)
+importFrom(Rcpp, sourceCpp)
+importFrom("grDevices", "dev.new")
+importFrom("graphics", "arrows", "hist", "layout", "legend", "lines", "plot")
+importFrom("stats", "lm", "median", "rbeta", "rnorm", "runif", "sd", "uniroot")
+importFrom(plyr, mapvalues)
+
+
+
