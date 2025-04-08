@@ -36,7 +36,7 @@ List indmodelseC(
 
   std::vector<double> landc = as< std::vector<double> >(land_r);
 
-  std::vector<double> land(landc.size());
+  double land[landc.size()];
   for(int i=0;i<landc.size();i++)
     land[i]=landc[i];
 
