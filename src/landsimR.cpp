@@ -36,23 +36,14 @@ List indmodelseC(
 
   std::vector<double> landc = as< std::vector<double> >(land_r);
 
-  //double land[landc.size()];
-  std::vector<double> land(landc.size()); //replaces declaration above to avoid warning with clang
+  double land[landc.size()];
   for(int i=0;i<landc.size();i++)
     land[i]=landc[i];
 
 // Stores the simulation parameters in the object param
 TSimParam param;
 
-  //param.land = new Mat_DP(land,nrow,ncol); 
-Mat_DP* landmat = new Mat_DP(nrow, ncol); //replaces param.land declaration above to avoid clang error
-for (int i = 0; i < nrow; ++i) {
-    for (int j = 0; j < ncol; ++j) {
-        (*landmat)[i][j] = land[i * ncol + j];  // assuming land is row-major
-    }
-}
-param.land = landmat;
-      
+   param.land = new Mat_DP(land,nrow,ncol); 
       //stores the landscape passed from R
    param.initpopulation = init_population;
    param.nsteps = n_steps;
