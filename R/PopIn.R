@@ -135,7 +135,7 @@ indmodel <- function(land_r="", param="", file="")
   
   start.time <- date()
   
-  if(param=="" && file=="")
+ if (isTRUE(identical(param, "")) && isTRUE(identical(file, "")))
   {
     # if the user does not provide a list or a file with the parameter values
     # use default file
@@ -151,7 +151,7 @@ indmodel <- function(land_r="", param="", file="")
     close(con.i)
   }
   
-  else if(param!="" && file!="")
+  else if (isFALSE(identical(par, "")) && isFALSE(identical(file, "")) )
   { 
     # if the user provides a list AND a file with the parameter values
     # return warning message
