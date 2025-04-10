@@ -4,7 +4,6 @@
 #include <deque>
 #include "landscape.h"
 #include "simulator.h"
-#include <iterator>
 #include "individual.h"
 
 
